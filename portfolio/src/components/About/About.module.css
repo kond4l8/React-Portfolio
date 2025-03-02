@@ -1,0 +1,196 @@
+.AboutWrapper{
+    flex-direction: row;
+
+}
+
+.aboutContainer{
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.aboutContainer h2{
+    font-size: 28px;
+    color: var(--text-color);
+}
+
+.aboutContainer p{
+    font-size: 20px;
+    color: var(--pera-color);
+}
+
+.skillWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.skillWrapper .skill{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.skillWrapper .skill h3{
+    color: var(--text-color);
+}
+
+.skillWrapper .skill .line{
+    height: 20px;
+    width: 100%;
+    background-color: var(--primary-color);
+    transition: .6s;
+    position: relative;
+    }
+
+.skillWrapper .skill .line:hover{
+        box-shadow: 0 0 50px var(--primary-color);
+    }
+    
+    
+.skillWrapper .skill .line::after{
+        content: '';
+        position: absolute;
+        top: 20%;
+        left: 0.5%;
+        width: 60%;
+        height: 60%;
+        background-color: var(--Light-color);
+    }
+    
+
+
+.AboutImg{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+}
+
+.AboutImg img{
+    width:540px;
+    height: auto;
+
+}
+
+.AboutImg .Exp{
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10%;
+    left: 7%;
+    right: 0;
+    background-color: var(--Light-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transform: rotate(-380deg);
+}
+
+.AboutImg .Exp:hover{
+    box-shadow: 0 0 50px var(--primary-color);
+}
+
+.AboutImg .Exp h2{
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 38px;
+    line-height: 60px;
+}
+
+.skill:nth-of-type(2) .line::after{width: 90%;}
+.skill:nth-of-type(3) .line::after{width: 79%;}
+.skill:nth-of-type(4) .line::after{width: 80%;}
+.skill:nth-of-type(5) .line::after{width: 79%;}
+.skill:nth-of-type(6) .line::after{width: 89%;}
+.skill:nth-of-type(7) .line::after{width: 89%;}
+
+
+@media screen and (max-width:1400px) {
+    .AboutImg img{
+       width: 85%;
+    }
+    
+    .AboutImg .Exp{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20%;
+    left: 3%;
+
+    }
+    
+    .AboutImg .Exp h2{
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+}
+
+@media screen and (max-width:1100px) {
+
+    .AboutWrapper{
+        flex-direction: column-reverse !important;
+    }
+
+    .aboutContainer{
+        width: 100%;
+        margin-top: 80px;
+    }
+
+
+    .AboutImg{
+          width: 100%;
+
+    }
+    .AboutImg img{
+       width: 80%;
+    }
+
+    .AboutImg .Exp{
+        height: 200px;
+        width: 200px;
+        bottom: 0%;
+        left: 5%;
+        }
+    
+}
+    
+@media screen and (max-width:900px){
+    .AboutImg img{
+        width: 100%;
+    }
+    .AboutImg .Exp{
+        height: 170px;
+        width: 170px;
+        border-radius: 50%;
+        position: absolute;
+        left: -10%;   
+        }
+        
+        .AboutImg .Exp h2{
+            font-size: 25px;
+        }
+
+}
+@media screen and (max-width:768px){
+    .AboutImg .Exp{
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        position: absolute;
+        left: -10%;   
+        }
+        
+        .AboutImg .Exp h2{
+            font-size: 25px;
+        }
+
+}

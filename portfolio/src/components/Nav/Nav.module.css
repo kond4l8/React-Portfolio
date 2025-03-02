@@ -1,0 +1,101 @@
+.Nav{
+    height: 80px;
+    width: 100%;
+    background-color: var(--dark-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12%;
+}
+
+.Nav .logo a{
+    font-size: 28px;
+    font-weight: 600;
+    color: #a0488d;
+}
+
+.NavBtns{
+    display: flex;
+    gap: 8px;
+}
+
+.NavBtns i{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #78376a;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* 
+used to hide the three liness button */
+.NavBtns i:nth-child(2){
+    display: none;
+}
+
+.Nav ul li{
+    display: inline-block;
+    margin: 0px 6px;
+}
+
+.Nav ul li a , .Nav i{
+    color: var(--text-color);
+}
+
+.Nav ul li a{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 12px;
+    background-color: var(--nav-text-bg);
+    transition: .6s;
+}
+
+.Nav ul li:hover a{
+    background-color: var(--primary-color);
+}
+
+@media screen and (max-width:1400px){
+    .Nav ul li a{
+       padding: 4px 8px;
+    }
+}
+
+
+@media screen and (max-width:1100px){
+    .NavBtns i:nth-child(2){
+        display: flex;
+    }
+    .Nav{
+        position: relative;
+    }
+    .Nav ul{
+        position:absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-color);
+        height: 0;
+        overflow: hidden;
+        transition: .6s;
+    }
+    .Nav ul li{
+        display: block;
+        /* padding for not scrolling or overflow */
+        padding: 15px;
+        padding-left: 12%;
+        width: 90%;
+    }
+    .Nav ul li a{
+        padding: 16px 20px;
+        font-size: 15px;
+
+    }
+
+    .Nav .activeNav{
+        height:85vh;
+    }
+}
